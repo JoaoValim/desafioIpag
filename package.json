@@ -1,0 +1,25 @@
+{
+  "name": "desafioipag",
+  "version": "1.0.0",
+  "description": "Resolucao do desafio proposto pela ipag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:api": "node api/index.js",
+    "start:consumer": "node worker/consumer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoValim/desafioIpag.git"
+  },
+  "author": "joao vitor valim de paiva",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/JoaoValim/desafioIpag/issues"
+  },
+  "homepage": "https://github.com/JoaoValim/desafioIpag#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
