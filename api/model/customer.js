@@ -1,4 +1,4 @@
-class customer{
+class Customer{
 
     #id
     #name

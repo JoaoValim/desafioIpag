@@ -1,4 +1,4 @@
-class order{
+export default class Order{
     #id
     #customer_id
     #order_number
@@ -46,5 +46,17 @@ class order{
     }
 
     
+
+    toJSON() {
+        return {
+            Id: this.#id,
+            CustomerId: this.#customer_id,
+            OrderNumber: this.#order_number,
+            TotalValue: this.#total_value,
+            Status: this.#status,
+            CreatedAt: this.#created_at,
+            UpdatedAt: this.#updated_at
+        };
+    }
 
 }

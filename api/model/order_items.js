@@ -1,4 +1,4 @@
-class order_items{
+class Order_items{
     #id
     #order_id
     #product_name
