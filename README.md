@@ -1,4 +1,4 @@
-# iPag-Pagamentos Digitais
+# DESAFIO iPag-Pagamentos Digitais
 
 Sistema de gestão de pedidos desenvolvido com Node.js, PostgreSQL e RabbitMQ.
 
