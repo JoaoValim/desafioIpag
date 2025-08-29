@@ -120,7 +120,7 @@ A documentação completa dos endpoints, incluindo exemplos de requisição e re
     "name": "João Silva",
     "document": "12345678901",
     "email": "joao@email.com",
-    "phone": "(11) 99999-9999"
+    "phone": "11999999999"
   },
   "order": {
     "total_value": 150.50,
