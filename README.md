@@ -18,7 +18,7 @@ Todo o projeto foi configurado para rodar com Docker. A única dependência que 
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/JoaoValim/desafioIpag
+git clone https://github.com/JoaoValim/desafioIpag.git
 cd desafioIpag
 ```
 
