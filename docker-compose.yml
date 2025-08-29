@@ -1,0 +1,52 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123456"
+      POSTGRES_DB: "ipag_db"
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - rabbitmq_logs:/var/log/rabbitmq
+    restart: always
+  app:
+    build: . 
+    container_name: ipag_api_container
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on: 
+      - postgres
+      - rabbitmq
+    env_file:
+      - .env.docker
+  worker:
+    build: . 
+    container_name: ipag_worker_container
+    restart: always
+    depends_on:
+      - postgres
+      - rabbitmq
+    env_file:
+      - .env.docker
+    command: npm run start:consumer # sobrescreve o comando padtao para iniciar o worker
+
+
+
+volumes:
+  rabbitmq_data:
+  rabbitmq_logs:
+  postgres_data:

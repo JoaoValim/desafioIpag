@@ -10,11 +10,11 @@ create table customers (
 create table orders (
     id serial primary key,
     customer_id integer,
-    order_number varchar(50) not null unique,
+    order_number varchar(20) not null,
     total_value numeric(10, 2) not null,
     status varchar(20) not null,
     created_at timestamp default current_timestamp,
-    updated_at timestamp default current_timestamp
+    updated_at timestamp default current_timestamp,
 
     constraint fk_orders foreign key (customer_id) references customers(id)
 );
@@ -24,7 +24,7 @@ create table order_items (
     order_id integer,
     product_name varchar(255) not null,
     quantity integer not null,
-    unit_value numeric(10, 2) not null
+    unit_value numeric(10, 2) not null,
 
     constraint fk_order_items foreign key (order_id) references orders(id)
 );

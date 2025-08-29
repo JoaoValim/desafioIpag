@@ -17,45 +17,74 @@ export default class Order{
         this.#updated_at = updated_at;
     }
 
-    get Id(){
+    get id(){
         return this.#id;
     }
 
-    get CustomerId(){
+    get customer_id(){
         return this.#customer_id;
     }
 
-    get OrderNumber(){
+    get order_number(){
         return this.#order_number;
     }
 
-    get TotalValue(){
+    get total_value(){
         return this.#total_value;
     }
 
-    get Status(){
+    get status(){
         return this.#status;
     }
 
-    get CreatedAt(){
+    get created_at(){
         return this.#created_at;
     }
 
-    get UpdatedAt(){
+    get updated_at(){
         return this.#updated_at;
     }
+
+    set id(id){
+        this.#id = id;
+    }
+
+    set customer_id(customer_id){
+        this.#customer_id = customer_id;
+    }
+
+    set order_number(order_number){
+        this.#order_number = order_number;
+    }
+
+    set total_value(total_value){
+        this.#total_value = total_value;
+    }
+
+    set status(status){
+        this.#status = status;
+    }
+
+    set created_at(created_at){
+        this.#created_at = created_at;
+    }
+
+    set updated_at(updated_at){
+        this.#updated_at = updated_at;
+    }
+
 
     
 
     toJSON() {
         return {
-            Id: this.#id,
-            CustomerId: this.#customer_id,
-            OrderNumber: this.#order_number,
-            TotalValue: this.#total_value,
-            Status: this.#status,
-            CreatedAt: this.#created_at,
-            UpdatedAt: this.#updated_at
+            id: this.#id,
+            customer_id: this.#customer_id,
+            order_number: this.#order_number,
+            total_value: this.#total_value,
+            status: this.#status,
+            created_at: this.#created_at,
+            updated_at: this.#updated_at
         };
     }
 
